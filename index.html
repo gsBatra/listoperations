@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Operations</title>
+</head>
+<body>
+<h1>List Operations</h1>
+<div class="browse">
+    <h3>Browse the list of items <button id="browse_btn">Browse</button> </h3>
+    <ul id="browse_list"></ul>
+</div>
+
+<div class="sort">
+    <h3>Sort the list of items by name <button id="sort_btn">Sort</button></h3>
+    <ul id="sort_list"></ul>
+</div>
+
+<div class="search">
+    <form id ="search">
+        <label for="search_box"></label><input type="text" id="search_box" placeholder="Enter a Name" />
+        <input id="submit_search" type="submit" value="Search" />
+    </form>
+    <ul id="search_list"></ul>
+</div>
+
+<div class="add">
+    <form id ="add">
+        <label for="add_box"></label><input type="text" id="add_box" placeholder="Enter a Name to Add" />
+        <input id="submit_add" type="submit" value="Add" />
+    </form>
+</div>
+
+<div class="edit">
+    <h3>Edit all item's description to "Edit Test" <button id="edit_btn">Edit</button></h3>
+</div>
+
+<br>
+<div class="delete">
+    <form id ="delete">
+        <label for="delete_box"></label><input type="text" id="delete_box" placeholder="Enter a Name to Delete" />
+        <input id="delete_search" type="submit" value="Delete" />
+    </form>
+</div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDt0ZLE33VsCBXI7_oDBr_Xhq7ucHcPz1I",
+        authDomain: "listoperations-6feb8.firebaseapp.com",
+        projectId: "listoperations-6feb8",
+        storageBucket: "listoperations-6feb8.appspot.com",
+        messagingSenderId: "37779044518",
+        appId: "1:37779044518:web:1d71d574dc71c909465c67"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+<script src="app.js"></script>
+</html>
